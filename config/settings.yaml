@@ -1,0 +1,28 @@
+version: 1.0.0
+enable_color_metrics: false
+image_saving_enabled: true
+paths:
+  app: app
+  config: config
+  data: data
+  database: data/database
+  images: data/images
+  calibration: data/calibration
+  calibration_history: data/calibration/history
+  exports: data/exports
+  recordings: data/recordings
+  logs: logs
+calibration:
+  calibration_id: default
+  roi_depth_rect: [50, 50, 540, 420]
+  centerline_x_px: 320
+  belt_bg_depth_path: data/calibration/belt_bg_depth.npy
+  homography_path: data/calibration/homography.npy
+default_variety:
+  name: default
+  min_object_area_mm2: 200.0
+  ignore_threshold_height_mm: 6.0
+  measurement_sample_count_n: 9
+  quality_invalid_depth_max_percent: 25.0
+  quality_min_usable_samples_kmin: 5
+  trim_count_t: 1
